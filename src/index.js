@@ -11,5 +11,8 @@ import 'tachyons';
 const store = createStore(searchRobots)
 
 
-ReactDOM.render(<App store={store} />, document.getElementById('root'));
+ReactDOM.render(
+                <Provider store={store}>
+                  <App />
+                </Provider>, document.getElementById('root'));
 registerServiceWorker();
